@@ -1,0 +1,212 @@
+/* ===== Base ===== */
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", Georgia, serif;
+}
+
+h2 {
+  color: #FFA500;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 0.3rem;
+}
+
+a {
+  color: #66CCFF;
+}
+
+/* ===== Header & navigation ===== */
+header {
+  text-align: center;
+  background-color: #0B1A2E;
+  padding: 1rem 0 0;
+}
+
+header h1 {
+  margin: 0;
+  letter-spacing: 0.05rem;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  color: #AAAAAA;
+  font-style: italic;
+}
+
+nav a {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: #00FF00;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  color: #FFFFFF;
+  background-color: #173F73;
+  border-bottom: 2px solid orange;
+}
+
+nav a.active {
+  color: orange;
+  border-bottom: 2px solid orange;
+  font-weight: bold;
+}
+
+/* ===== Main content ===== */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.hero section {
+  flex: 1 1 20rem;
+}
+
+figure {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 255, 0, 0.35);
+}
+
+figcaption {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #CCCCCC;
+}
+
+/* Formulas */
+.formula {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: Georgia, serif;
+  background-color: #111111;
+  border-left: 4px solid #FFA500;
+  padding: 0.75rem;
+  margin: 1rem 0;
+}
+
+/* ===== Two-column layout (Assumptions page) ===== */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem 1rem;
+}
+
+details {
+  margin-bottom: 0.75rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #00FF00;
+}
+
+/* ===== Definition lists ===== */
+dt {
+  font-weight: bold;
+  color: #FFA500;
+  margin-top: 0.75rem;
+}
+
+dd {
+  margin-left: 1.5rem;
+}
+
+/* ===== Code ===== */
+pre {
+  background-color: #1A1A1A;
+  border-left: 4px solid #00FF00;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  color: #B5F5B5;
+}
+
+/* ===== Table ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  border: 1px solid #DBE4F0;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+th {
+  background-color: #173F73;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #1A1A1A;
+}
+
+/* ===== Sources ===== */
+.sources {
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #AAAAAA;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}
+
+footer img {
+  width: 120px;
+  margin-top: 1rem;
+}
+
+/* Stack the columns on narrow screens */
+@media (max-width: 700px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}

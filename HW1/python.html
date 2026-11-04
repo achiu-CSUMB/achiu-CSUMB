@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Regression | In Python</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Linear Regression</h1>
+    <p class="tagline">Drawing the best straight line through data</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="math.html">The Math</a>
+      <a href="assumptions.html">Assumptions</a>
+      <a href="python.html" class="active">In Python</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>From Formula to Code</h2>
+      <p>Linear regression is a good first machine learning project because the whole algorithm fits in a few lines. Below, the same five-point example from <a href="math.html">The Math</a> page is solved twice: once by hand with NumPy, and once with the scikit-learn library.</p>
+    </section>
+
+    <figure>
+      <img src="img/workflow.svg" alt="Flow diagram with five boxes: collect data, split train and test, fit model, evaluate, predict" width="560" height="180">
+      <figcaption>The steps of a typical regression project.</figcaption>
+    </figure>
+
+    <section>
+      <h2>Version 1: From Scratch with NumPy</h2>
+      <p>This version translates the closed-form slope and intercept formulas directly into code:</p>
+<pre><code>import numpy as np
+
+x = np.array([1, 2, 3, 4, 5])
+y = np.array([2, 4, 5, 4, 5])
+
+b1 = np.sum((x - x.mean()) * (y - y.mean())) / np.sum((x - x.mean()) ** 2)
+b0 = y.mean() - b1 * x.mean()
+
+print(f"Intercept: {b0:.2f}, Slope: {b1:.2f}")
+print(f"Prediction at x=6: {b0 + b1 * 6:.2f}")
+
+# Output:
+# Intercept: 2.20, Slope: 0.60
+# Prediction at x=6: 5.80</code></pre>
+    </section>
+
+    <section>
+      <h2>Version 2: Using scikit-learn</h2>
+      <p>In practice, developers use a tested library. scikit-learn expects the inputs as a 2-D array (one row per sample, one column per feature), which is why <code>X</code> is written with nested brackets:</p>
+<pre><code>import numpy as np
+from sklearn.linear_model import LinearRegression
+
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([2, 4, 5, 4, 5])
+
+model = LinearRegression().fit(X, y)
+
+print(model.intercept_)       # 2.2
+print(model.coef_)            # [0.6]
+print(model.score(X, y))      # R-squared: 0.6
+print(model.predict([[6]]))   # [5.8]</code></pre>
+      <p>Both versions agree with the hand calculation. With real datasets, you would also split the data into training and test sets so the model is judged on examples it did not learn from.</p>
+    </section>
+
+    <section>
+      <h2>Real-World Applications</h2>
+      <table>
+        <thead>
+          <tr><th>Field</th><th>Input (x)</th><th>Predicted output (y)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Real estate</td><td>Square footage, bedrooms</td><td>Sale price</td></tr>
+          <tr><td>Cloud computing</td><td>Number of active users</td><td>Server CPU load</td></tr>
+          <tr><td>Software engineering</td><td>Lines of code, team size</td><td>Development effort</td></tr>
+          <tr><td>Marketing</td><td>Advertising budget</td><td>Monthly sales</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://scikit-learn.org/stable/modules/linear_model.html">scikit-learn User Guide: Linear Models</a></li>
+        <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">scikit-learn API: LinearRegression</a></li>
+        <li><a href="https://numpy.org/doc/stable/">NumPy Documentation</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Alvin Chiu. All rights reserved.</p>
+    <p>This site is for academic purposes only.</p>
+    <p>CST 336 Internet Programming.</p>
+    <img src="img/csumb-logo.png" alt="CSUMB Logo">
+  </footer>
+</body>
+</html>

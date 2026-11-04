@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Regression | Assumptions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Linear Regression</h1>
+    <p class="tagline">Drawing the best straight line through data</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="math.html">The Math</a>
+      <a href="assumptions.html" class="active">Assumptions</a>
+      <a href="python.html">In Python</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>When Can We Trust the Line?</h2>
+      <p>Least squares will always produce a line, even for data that is not linear at all. The coefficients, confidence intervals, and p-values are only reliable when a few conditions hold. A common memory aid is <strong>LINE</strong>: Linearity, Independence, Normality, and Equal variance.</p>
+    </section>
+
+    <figure>
+      <img src="img/residual-plots.svg" alt="Two residual plots: on the left, green points scattered evenly around zero; on the right, red points spreading out into a funnel" width="560" height="300">
+      <figcaption>Residual plots are the main tool for checking assumptions.</figcaption>
+    </figure>
+
+    <div class="two-col">
+      <section class="card">
+        <h2>The Four Assumptions</h2>
+        <details open>
+          <summary>Linearity</summary>
+          <p>The average value of <code>y</code> really does change in a straight-line way as <code>x</code> changes. A curved pattern in the residuals means a straight line is the wrong shape.</p>
+        </details>
+        <details>
+          <summary>Independence</summary>
+          <p>Each observation's error is unrelated to the others. This is often broken by time-series data, where today's value tends to resemble yesterday's.</p>
+        </details>
+        <details>
+          <summary>Normality</summary>
+          <p>The errors follow a roughly bell-shaped distribution. This matters most for hypothesis tests and intervals in small samples; a Q-Q plot is the usual check.</p>
+        </details>
+        <details>
+          <summary>Equal Variance</summary>
+          <p>Also called homoscedasticity: the spread of the residuals stays about the same across all fitted values. A funnel shape signals that it is violated.</p>
+        </details>
+      </section>
+
+      <section class="card">
+        <h2>Common Pitfalls &amp; Fixes</h2>
+        <details open>
+          <summary>Outliers</summary>
+          <p>Because errors are squared, one extreme point can drag the whole line toward it. Investigate unusual points rather than deleting them automatically, or consider a robust regression method.</p>
+        </details>
+        <details>
+          <summary>Multicollinearity</summary>
+          <p>When two inputs are highly correlated with each other, their individual coefficients become unstable and hard to interpret. Dropping or combining features can help.</p>
+        </details>
+        <details>
+          <summary>Non-linear patterns</summary>
+          <p>Transforming a variable (for example, taking a logarithm) or adding a squared term often lets a "linear" model capture a curve, because the model only needs to be linear in its coefficients.</p>
+        </details>
+        <details>
+          <summary>Extrapolation</summary>
+          <p>Predictions far outside the range of the training data are risky; the relationship may not continue in the same way beyond what was observed.</p>
+        </details>
+      </section>
+    </div>
+
+    <section>
+      <h2>Correlation Is Not Causation</h2>
+      <p>Even a model that meets every assumption only shows that two variables move together. A strong slope does not prove that changing <code>x</code> will cause <code>y</code> to change; a hidden third variable could be driving both. Establishing cause usually requires a controlled experiment or a careful causal analysis.</p>
+    </section>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://online.stat.psu.edu/stat501/lesson/4">Penn State STAT 501, Lesson 4: SLR Model Assumptions</a></li>
+        <li><a href="https://www.statlearning.com/">James, Witten, Hastie &amp; Tibshirani, <cite>An Introduction to Statistical Learning</cite>, Chapter 3</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Homoscedasticity_and_heteroscedasticity">Wikipedia: Homoscedasticity and heteroscedasticity</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Alvin Chiu. All rights reserved.</p>
+    <p>This site is for academic purposes only.</p>
+    <p>CST 336 Internet Programming.</p>
+    <img src="img/csumb-logo.png" alt="CSUMB Logo">
+  </footer>
+</body>
+</html>

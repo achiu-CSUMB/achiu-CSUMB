@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Regression | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Linear Regression</h1>
+    <p class="tagline">Drawing the best straight line through data</p>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="math.html">The Math</a>
+      <a href="assumptions.html">Assumptions</a>
+      <a href="python.html">In Python</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <figure>
+        <img src="img/scatter-fit.svg" alt="Scatter plot of blue data points with an orange best-fit line rising from left to right" width="560" height="360">
+        <figcaption>A fitted regression line summarizing the trend in 40 data points.</figcaption>
+      </figure>
+
+      <section>
+        <h2>What is Linear Regression?</h2>
+        <p>Linear regression is one of the oldest and most widely used techniques in statistics and machine learning. It models the relationship between an input variable (or several) and a numeric output by fitting a straight line through the observed data.</p>
+        <p>Once the line is found, it can be used to <strong>explain</strong> how strongly the output depends on the input and to <strong>predict</strong> the output for new inputs the model has never seen.</p>
+      </section>
+    </div>
+
+    <section>
+      <h2>The Core Idea</h2>
+      <p>In its simplest form, called <em>simple linear regression</em>, there is one input <code>x</code> and one output <code>y</code>. The model assumes:</p>
+      <p class="formula">y = β<sub>0</sub> + β<sub>1</sub>x + ε</p>
+      <p>Here β<sub>0</sub> is the intercept (the predicted value of <code>y</code> when <code>x</code> is zero), β<sub>1</sub> is the slope (how much <code>y</code> changes when <code>x</code> increases by one unit), and ε is random error the line cannot explain. When there are several inputs, the same idea extends to <em>multiple linear regression</em>, where each input gets its own slope coefficient.</p>
+    </section>
+
+    <section>
+      <h2>Key Terms</h2>
+      <dl>
+        <dt>Dependent variable (response)</dt>
+        <dd>The quantity being predicted, such as a house price.</dd>
+        <dt>Independent variable (feature)</dt>
+        <dd>The input used to make the prediction, such as square footage.</dd>
+        <dt>Coefficients</dt>
+        <dd>The intercept and slope values that the algorithm learns from the data.</dd>
+        <dt>Residual</dt>
+        <dd>The gap between an actual observed value and the value the line predicts.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Why It Matters in Computer Science</h2>
+      <p>Linear regression is usually the first supervised learning algorithm taught in machine learning courses because it is simple, fast, and easy to interpret. It is used for forecasting sales, estimating software project effort, predicting server load, and as a baseline that more complex models such as neural networks must beat. Explore the other pages to see <a href="math.html">how the line is calculated</a>, <a href="assumptions.html">when the model can be trusted</a>, and <a href="python.html">how to build one in Python</a>.</p>
+    </section>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Linear_regression">Wikipedia: Linear regression</a></li>
+        <li><a href="https://www.statlearning.com/">James, Witten, Hastie &amp; Tibshirani, <cite>An Introduction to Statistical Learning</cite></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Alvin Chiu. All rights reserved.</p>
+    <p>This site is for academic purposes only.</p>
+    <p>CST 336 Internet Programming.</p>
+    <img src="img/csumb-logo.png" alt="CSUMB Logo">
+  </footer>
+</body>
+</html>

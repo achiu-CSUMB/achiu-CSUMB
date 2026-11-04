@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Regression | The Math</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Linear Regression</h1>
+    <p class="tagline">Drawing the best straight line through data</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="math.html" class="active">The Math</a>
+      <a href="assumptions.html">Assumptions</a>
+      <a href="python.html">In Python</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Finding the "Best" Line</h2>
+      <p>Infinitely many lines could be drawn through a cloud of points, so we need a rule for picking one. The standard rule is <strong>Ordinary Least Squares (OLS)</strong>: choose the intercept and slope that make the total of the squared residuals as small as possible.</p>
+      <p class="formula">SSE = Σ (y<sub>i</sub> − ŷ<sub>i</sub>)<sup>2</sup></p>
+      <p>Squaring each residual does two things: it stops positive and negative errors from cancelling each other out, and it penalizes large misses much more heavily than small ones.</p>
+    </section>
+
+    <figure>
+      <img src="img/residuals.svg" alt="Five data points with dashed red lines showing their vertical distance to the orange least squares line" width="560" height="360">
+      <figcaption>The residuals (dashed red) are what least squares minimizes.</figcaption>
+    </figure>
+
+    <section>
+      <h2>The Closed-Form Solution</h2>
+      <p>Using calculus (setting the derivatives of SSE to zero), the minimizing slope and intercept for simple linear regression are:</p>
+      <p class="formula">β<sub>1</sub> = Σ(x<sub>i</sub> − x̄)(y<sub>i</sub> − ȳ) / Σ(x<sub>i</sub> − x̄)<sup>2</sup></p>
+      <p class="formula">β<sub>0</sub> = ȳ − β<sub>1</sub>x̄</p>
+      <p>Here x̄ and ȳ are the averages of the inputs and outputs. A useful consequence is that the fitted line always passes through the point (x̄, ȳ). For multiple regression, the same idea is written with matrices as β = (X<sup>T</sup>X)<sup>−1</sup>X<sup>T</sup>y.</p>
+    </section>
+
+    <section>
+      <h2>Worked Example</h2>
+      <p>Take five data points. The averages are x̄ = 3 and ȳ = 4.</p>
+      <table>
+        <thead>
+          <tr><th>x</th><th>y</th><th>x − x̄</th><th>y − ȳ</th><th>(x − x̄)(y − ȳ)</th><th>(x − x̄)<sup>2</sup></th><th>ŷ</th><th>Residual</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>2</td><td>−2</td><td>−2</td><td>4</td><td>4</td><td>2.8</td><td>−0.8</td></tr>
+          <tr><td>2</td><td>4</td><td>−1</td><td>0</td><td>0</td><td>1</td><td>3.4</td><td>0.6</td></tr>
+          <tr><td>3</td><td>5</td><td>0</td><td>1</td><td>0</td><td>0</td><td>4.0</td><td>1.0</td></tr>
+          <tr><td>4</td><td>4</td><td>1</td><td>0</td><td>0</td><td>1</td><td>4.6</td><td>−0.6</td></tr>
+          <tr><td>5</td><td>5</td><td>2</td><td>1</td><td>2</td><td>4</td><td>5.2</td><td>−0.2</td></tr>
+        </tbody>
+      </table>
+      <p>The sums are 6 and 10, so β<sub>1</sub> = 6 / 10 = <strong>0.6</strong> and β<sub>0</sub> = 4 − 0.6 × 3 = <strong>2.2</strong>. The fitted line is <strong>ŷ = 2.2 + 0.6x</strong>. Notice that the residuals add up to zero, which is always true for an OLS line with an intercept.</p>
+    </section>
+
+    <section>
+      <h2>Measuring the Fit: R<sup>2</sup></h2>
+      <p>The coefficient of determination, R<sup>2</sup>, tells us what share of the variation in <code>y</code> the line explains:</p>
+      <p class="formula">R<sup>2</sup> = 1 − SSE / SST</p>
+      <p>SST is the total squared distance of each <code>y</code> from its mean. In the example, SSE = 2.4 and SST = 6, so R<sup>2</sup> = 1 − 2.4 / 6 = <strong>0.6</strong>. The line explains 60% of the variation; the remaining 40% is scatter around the line. An R<sup>2</sup> of 1 would mean every point sits exactly on the line.</p>
+    </section>
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://online.stat.psu.edu/stat501/">Penn State STAT 501: Regression Methods</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Ordinary_least_squares">Wikipedia: Ordinary least squares</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Coefficient_of_determination">Wikipedia: Coefficient of determination</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Alvin Chiu. All rights reserved.</p>
+    <p>This site is for academic purposes only.</p>
+    <p>CST 336 Internet Programming.</p>
+    <img src="img/csumb-logo.png" alt="CSUMB Logo">
+  </footer>
+</body>
+</html>
