@@ -1,0 +1,76 @@
+Guided Lab: Personal Portfolio
+Checkpoint Responses
+
+Downloaded: 11/3/2026, 9:53:54 PM
+
+Lesson 1: Plan the portfolio
+Question:
+No checkpoint question for this lesson.
+
+Student response:
+[No response saved]
+
+----------------------------------------
+
+Lesson 2: Create the Home Page
+Question:
+Is <div> a semantic element? Why or why not?
+
+Student response:
+No. <div> is a non-semantic element because its name doesn’t describe the meaning or purpose of its content. It’s a generic container used mainly for grouping and styling.
+
+----------------------------------------
+
+Lesson 3: Add Home Page Content
+Question:
+Is the footer optional in all assignments and exams?
+
+Student response:
+No, ALL assignments and exams must have the following footer.
+
+----------------------------------------
+
+Lesson 4: Add External Stylesheet
+Question:
+Why is an external stylesheet usually easier to maintain than many inline styles?
+
+Student response:
+An external stylesheet centralizes all styling in one file, so a design change only needs to be made once and automatically applies to every element and page that uses it.
+
+----------------------------------------
+
+Lesson 5: Style Home Page
+Question:
+Examine the code below. What to do to display the content of both div elements next to each other?
+
+Student response:
+"display: flex;" can be added to section to display the contents next to each other.
+
+----------------------------------------
+
+Lesson 6: Create the About page
+Question:
+Explain the difference between an ID selector and a class selector in CSS. When would you use each one?
+
+Student response:
+An ID selector targets the one element whose id attribute matches. A class selector targets every element whose class attribute contains that class.
+
+----------------------------------------
+
+Lesson 7: Create the Contact page
+Question:
+What information does the title attribute provide when an iframe embeds a contact form?
+
+Student response:
+The title attribute gives the iframe an accessible name, a short description of what the embedded content is.
+
+----------------------------------------
+
+Lesson 8: Use online fonts
+Question:
+Why should decorative online fonts usually be limited to headings instead of all body text?
+
+Student response:
+Because decorative fonts are built to catch the eye at large sizes, not to be read for long stretches.
+
+----------------------------------------
