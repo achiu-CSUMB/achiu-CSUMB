@@ -1,0 +1,90 @@
+body {
+  background-color: #000000;
+  color: #FFFFFF; /* Set text color to white for contrast */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;  /* Set line height for better readability */
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", Georgia, serif;  /* online font + fallbacks */
+}
+
+header, nav, main, footer {
+  text-align: center;
+}
+nav a {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #00FF00;
+  text-decoration: none; /* Remove underline from links */
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #173f73;
+  font-size: 2rem;
+  border-bottom: 2px solid orange;
+}
+nav a.active {
+  color: orange;
+  border-bottom: 2px solid orange;
+  font-weight: bold;
+}
+main {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: center; /* Center the items horizontally */
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+footer {
+  display: flex;
+  flex-direction: column;   /* stack the lines and logo vertically */
+  align-items: center;
+  font-size: 0.8rem;        /* smaller text */
+  color: #aaaaaa;           /* different color – pick any you like */
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}
+
+footer img {
+  width: 120px;             /* keep the logo from being huge */
+  margin-top: 1rem;
+}
+
+#about-main {
+  display: block; /* Override the flex display for the about page */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+#table-header {
+  background-color: #173f73; /* Dark blue background for header */
+  color: #FFFFFF; /* White text for header */
+}
+
+.table-row {
+  background-color: #f2f2f2; /* Light gray background for rows */
+} 
+
+table{
+  border-collapse: collapse; /* Collapse borders into a single border */
+  margin-bottom: 2rem; /* Add some space below the table */
+  width: 75%;
+} 
+
+th, td {
+  border: 1px solid #dbe4f0; /* Add a border to the table, header cells, and data cells */
+  padding: 0.5rem; /* Add padding to cells for better readability */
+  text-align: left; /* Align text to the left */
+}
+
+iframe {
+  display: block;
+  width: min(100%, 40rem);
+  min-height: 40rem;
+  margin: 0 auto;
+  border: 1px solid #dbe4f0;
+}
