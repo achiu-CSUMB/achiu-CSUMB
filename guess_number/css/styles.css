@@ -1,0 +1,92 @@
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #1e2a5a;   /* fallback if the image doesn't load */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 40px 15px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Solid backgrounds keep the text readable on top of the image */
+header,
+#main {
+    background-color: #ffffff;
+    max-width: 520px;
+    margin: 0 auto 20px auto;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+h1 {
+    color: #1e2a5a;
+    margin: 0 0 8px 0;
+}
+
+h2 {
+    color: #555555;
+    font-size: 1.05em;
+    font-weight: normal;
+    margin: 0;
+}
+
+#main {
+    font-size: 1.1em;
+    line-height: 2em;
+}
+
+#playerGuess {
+    font-size: 1em;
+    text-align: center;
+    padding: 4px;
+    border: 2px solid #1e2a5a;
+    border-radius: 6px;
+}
+
+button {
+    font-size: 0.95em;
+    padding: 6px 16px;
+    margin: 4px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#guessBtn {
+    background-color: #2e7d32;
+}
+
+#resetBtn {
+    background-color: #c62828;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#attemptsLeft {
+    font-weight: bold;
+    color: #1e2a5a;
+}
+
+#feedback {
+    font-weight: bold;
+    min-height: 2em;
+}
+
+#guesses {
+    font-family: "Courier New", monospace;
+}
+
+#scoreboard {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px solid #cccccc;
+    font-weight: bold;
+}
