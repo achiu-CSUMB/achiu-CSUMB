@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stock Price Grapher</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Chart.js draws the line graph -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <h1>Stock Price Grapher</h1>
+    <p>Enter a ticker symbol to graph its recent daily closing prices.</p>
+  </header>
+
+  <main>
+    <form id="stock-form" class="card" novalidate>
+      <div class="field">
+        <label for="ticker">Ticker symbol</label>
+        <input type="text" id="ticker" name="ticker" placeholder="e.g. AAPL"
+               maxlength="12" autocomplete="off" aria-describedby="ticker-error">
+        <p class="field-error" id="ticker-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="api-key">Alpha Vantage API key</label>
+        <input type="password" id="api-key" name="api-key" placeholder="Your API key"
+               autocomplete="off" aria-describedby="api-key-error">
+        <p class="field-error" id="api-key-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="range">Time range</label>
+        <select id="range" name="range">
+          <option value="30">Last 30 trading days</option>
+          <option value="60">Last 60 trading days</option>
+          <option value="100" selected>Last 100 trading days</option>
+        </select>
+      </div>
+
+      <button type="submit" id="submit-button">Graph stock</button>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <section id="results" class="card" hidden>
+      <h2 id="results-title"></h2>
+      <p id="results-subtitle" class="muted"></p>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Latest close</span>
+          <span class="stat-value" id="stat-latest"></span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Change over range</span>
+          <span class="stat-value" id="stat-change"></span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Range high</span>
+          <span class="stat-value" id="stat-high"></span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Range low</span>
+          <span class="stat-value" id="stat-low"></span>
+        </div>
+      </div>
+
+      <div class="chart-box">
+        <canvas id="price-chart" role="img" aria-label="Line graph of daily closing prices"></canvas>
+      </div>
+
+      <h3>Most recent trading days</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Open</th>
+              <th scope="col">High</th>
+              <th scope="col">Low</th>
+              <th scope="col">Close</th>
+              <th scope="col">Volume</th>
+            </tr>
+          </thead>
+          <tbody id="price-rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    Data from the Alpha Vantage API. Prices are not adjusted for stock splits or dividends.
+  </footer>
+</body>
+</html>
