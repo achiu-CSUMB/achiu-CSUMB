@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Solar System</title>
+</head>
+<body>
+    <h1>The Solar System</h1>
+     <%- include('partials/nav') %>
+
+    <h2><%= planetName %></h2>
+    <img src="<%= planetInfo.image %>" alt="<%= planetName %>" width="300">
+    <p class="description"><%= planetInfo.description %></p>
+    <ul class="facts">
+    <li><strong>Distance from Sun:</strong> <%= planetInfo.distanceFromSun %></li>
+    <li><strong>Year length:</strong> <%= planetInfo.yearLength %></li>
+    <li><strong>One day:</strong> <%= planetInfo.oneEarthDay %></li>
+    <li><strong>Radius:</strong> <%= planetInfo.radius %> miles</li>
+    <li><strong>Moons:</strong> <%= planetInfo.moons %></li>
+    </ul>
+    <a href="<%= planetInfo.websiteLink %>" target="_blank">More on NASA's site</a>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

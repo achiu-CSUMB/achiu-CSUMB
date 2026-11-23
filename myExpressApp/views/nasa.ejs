@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head') %>
+<body>
+  <h1>NASA Picture of the Day</h1>
+  <%- include('partials/nav') %>
+
+  <h2><%= pod.title %> (<%= pod.date %>)</h2>
+  <% if (pod.media_type === 'video') { %>
+    <iframe src="<%= pod.url %>" width="640" height="360" allowfullscreen></iframe>
+  <% } else { %>
+    <img src="<%= pod.url %>" alt="<%= pod.title %>" width="600">
+  <% } %>
+  <p class="description"><%= pod.explanation %></p>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
