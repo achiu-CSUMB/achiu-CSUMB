@@ -19,9 +19,10 @@ app.get('/', async(req, res) => {
     res.render("index", { "image": randomImage });
 });
 
-
-app.listen(3000, () => {
-   console.log('server started');
+//to connect with Render+github
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
 });
 
 app.get('/planet', (req, res) => {
