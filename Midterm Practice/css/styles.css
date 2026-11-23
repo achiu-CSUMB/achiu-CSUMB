@@ -1,0 +1,26 @@
+body {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.main-panel {
+  max-width: 760px;
+  background-color: rgba(10, 40, 90, 0.75); /* translucent navy so the flowers show through */
+}
+
+.quote-header {
+  background-color: #06336b;
+}
+
+.flag {
+}
+
+.author-pic {
+  max-height: 220px;
+}
+
+#languages label {
+  margin-right: 0.5rem;
+}

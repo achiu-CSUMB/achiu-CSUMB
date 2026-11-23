@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Famous Quotes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <main class="container my-4 p-0 main-panel">
+
+    <!-- 1. Random quote + author -->
+    <header class="quote-header text-white p-4">
+      <h1 id="quote" class="text-center fw-semibold">Loading quote...</h1>
+      <h2 id="author" class="text-end fst-italic fw-semibold"></h2>
+    </header>
+
+    <section class="p-4 text-center text-white">
+
+      <!-- 4. Flag (shown after Translate) -->
+      <div class="mb-3">
+        <img id="flag" src="" alt="Flag" class="flag d-none">
+      </div>
+
+      <!-- 3. Language radios (random order) + Translate -->
+      <div class="d-flex justify-content-center align-items-center flex-wrap gap-3">
+        <div id="languages"></div>
+        <button id="translateBtn" class="btn btn-outline-info">Translate!</button>
+      </div>
+      <div id="translateError" class="text-warning mt-2"></div>
+
+      <hr class="my-4">
+
+      <!-- 2. Author info (two-column) -->
+      <button id="authorBtn" class="btn btn-outline-warning">Display Author Info</button>
+      <div id="authorInfo" class="row mt-3 text-start d-none">
+        <div class="col-md-4 text-center">
+          <img id="authorPic" src="" alt="Author picture" class="img-fluid rounded author-pic">
+        </div>
+        <div class="col-md-8">
+          <p id="authorBio"></p>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <!-- 5. Get N quotes -->
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <label for="numQuotes">Number of Quotes:</label>
+        <input type="number" id="numQuotes" class="form-control w-auto" placeholder="1-5" min="1" max="5">
+        <button id="getQuotesBtn" class="btn btn-success">Get Quotes</button>
+      </div>
+      <div id="quotesError" class="text-warning mt-2"></div>
+      <div id="quotesList" class="mt-3 text-start"></div>
+
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
