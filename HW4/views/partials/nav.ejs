@@ -1,0 +1,14 @@
+<%
+  const links = [
+    { href: '/',            label: 'Home' },
+    { href: '/math',        label: 'The Math' },
+    { href: '/assumptions', label: 'Assumptions' },
+    { href: '/python',      label: 'In Python' },
+    { href: '/data',        label: 'Real Data' }
+  ];
+%>
+    <nav>
+<% links.forEach(link => { %>
+      <a href="<%= link.href %>"<%- link.href === active ? ' class="active"' : '' %>><%= link.label %></a>
+<% }); %>
+    </nav>

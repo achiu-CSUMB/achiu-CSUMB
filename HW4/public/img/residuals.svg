@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360" font-family="Arial, sans-serif">
+<title>Residuals between data points and the least squares line</title>
+<rect width="560" height="360" fill="#0B1A2E"/>
+<line x1="60" y1="310" x2="530" y2="310" stroke="#AAAAAA"/>
+<line x1="60" y1="30" x2="60" y2="310" stroke="#AAAAAA"/>
+<text x="295.0" y="348" fill="#CCCCCC" font-size="14" text-anchor="middle">x</text>
+<text x="18" y="170.0" fill="#CCCCCC" font-size="14" text-anchor="middle" transform="rotate(-90 18 170.0)">y</text>
+<line x1="99.2" y1="202.3" x2="490.8" y2="73.1" stroke="#FFA500" stroke-width="3"/>
+<line x1="138.3" y1="223.8" x2="138.3" y2="189.4" stroke="#FF5555" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="138.3" cy="223.8" r="7" fill="#66CCFF"/>
+<line x1="216.7" y1="137.7" x2="216.7" y2="163.5" stroke="#FF5555" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="216.7" cy="137.7" r="7" fill="#66CCFF"/>
+<line x1="295.0" y1="94.6" x2="295.0" y2="137.7" stroke="#FF5555" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="295.0" cy="94.6" r="7" fill="#66CCFF"/>
+<line x1="373.3" y1="137.7" x2="373.3" y2="111.8" stroke="#FF5555" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="373.3" cy="137.7" r="7" fill="#66CCFF"/>
+<line x1="451.7" y1="94.6" x2="451.7" y2="86.0" stroke="#FF5555" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="451.7" cy="94.6" r="7" fill="#66CCFF"/>
+<text x="75" y="45" fill="#FFA500" font-size="16">ŷ = 2.2 + 0.6x</text>
+<text x="75" y="68" fill="#FF5555" font-size="14">dashed red = residuals (y − ŷ)</text>
+</svg>

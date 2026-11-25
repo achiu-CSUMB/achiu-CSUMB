@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300" font-family="Arial, sans-serif">
+<title>Residual plots: random scatter versus a funnel pattern</title>
+<rect width="560" height="300" fill="#0B1A2E"/>
+<rect x="30" y="30" width="240" height="220" fill="none" stroke="#555555"/>
+<line x1="30" y1="140" x2="270" y2="140" stroke="#AAAAAA" stroke-dasharray="4 4"/>
+<circle cx="98.1" cy="158.5" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="170.6" cy="145.3" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="174.9" cy="137.0" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="216.8" cy="138.7" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="102.4" cy="133.5" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="144.1" cy="74.4" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="216.6" cy="168.2" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="80.8" cy="135.8" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="176.7" cy="123.6" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="197.8" cy="157.9" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="183.9" cy="109.0" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="168.0" cy="126.8" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="110.7" cy="100.7" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="144.6" cy="132.2" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="193.3" cy="117.1" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="233.4" cy="161.8" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="129.2" cy="133.2" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="236.2" cy="160.6" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="225.0" cy="131.2" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="94.0" cy="133.8" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="242.2" cy="165.8" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="110.6" cy="129.0" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="151.4" cy="154.0" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="166.8" cy="127.8" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="166.7" cy="115.0" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="234.9" cy="157.1" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="220.6" cy="110.2" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="83.3" cy="141.7" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="221.4" cy="97.7" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="163.7" cy="149.6" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="192.3" cy="130.9" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="164.6" cy="103.4" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="107.4" cy="103.8" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="247.0" cy="124.8" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="68.5" cy="133.6" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="80.9" cy="159.5" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="109.2" cy="135.2" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="59.7" cy="180.3" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="172.7" cy="109.4" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="116.5" cy="131.1" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="225.4" cy="116.4" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="248.7" cy="142.9" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="112.3" cy="116.0" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="57.2" cy="127.4" r="4" fill="#00FF00" opacity="0.8"/>
+<circle cx="90.1" cy="163.0" r="4" fill="#00FF00" opacity="0.8"/>
+<text x="150" y="20" fill="#00FF00" font-size="15" text-anchor="middle">Good: random scatter</text>
+<text x="150" y="272" fill="#CCCCCC" font-size="12" text-anchor="middle">fitted value ŷ</text>
+<rect x="300" y="30" width="240" height="220" fill="none" stroke="#555555"/>
+<line x1="300" y1="140" x2="540" y2="140" stroke="#AAAAAA" stroke-dasharray="4 4"/>
+<circle cx="351.9" cy="130.2" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="329.4" cy="135.2" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="510.8" cy="170.4" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="498.5" cy="175.7" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="424.0" cy="117.9" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="448.5" cy="175.8" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="443.8" cy="163.8" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="507.2" cy="189.4" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="463.6" cy="141.7" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="368.1" cy="154.4" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="424.2" cy="65.0" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="429.6" cy="109.2" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="435.8" cy="137.7" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="325.0" cy="147.6" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="332.9" cy="148.4" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="445.2" cy="188.9" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="390.8" cy="133.2" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="461.0" cy="140.6" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="333.0" cy="141.9" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="454.9" cy="113.9" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="411.3" cy="144.5" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="438.3" cy="152.8" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="382.9" cy="123.0" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="394.1" cy="155.4" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="395.7" cy="150.8" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="473.9" cy="89.6" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="466.6" cy="131.7" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="382.4" cy="133.9" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="368.3" cy="110.5" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="358.1" cy="160.4" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="341.2" cy="133.4" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="384.7" cy="159.2" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="407.8" cy="98.9" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="490.4" cy="121.1" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="449.7" cy="112.9" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="496.2" cy="170.1" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="344.9" cy="137.5" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="425.9" cy="120.9" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="487.0" cy="68.7" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="357.4" cy="144.6" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="448.1" cy="79.6" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="480.6" cy="152.1" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="378.8" cy="131.8" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="478.2" cy="144.9" r="4" fill="#FF5555" opacity="0.8"/>
+<circle cx="403.5" cy="117.9" r="4" fill="#FF5555" opacity="0.8"/>
+<text x="420" y="20" fill="#FF5555" font-size="15" text-anchor="middle">Problem: funnel shape</text>
+<text x="420" y="272" fill="#CCCCCC" font-size="12" text-anchor="middle">fitted value ŷ</text>
+<text x="280" y="294" fill="#CCCCCC" font-size="12" text-anchor="middle">vertical axis: residual (y − ŷ)</text>
+</svg>
